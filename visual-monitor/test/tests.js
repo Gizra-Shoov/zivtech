@@ -62,14 +62,13 @@ describe('Visual monitor testing', function() {
     client
       .url(baseUrl)
       .click('.mailchimp-close')
-      .pause(3000)
+      .pause(6000)
       .webdrivercss(testName + '.homepage', {
         name: '1',
-        remove:
+        hide:
           [
-            // Remove the background video.
-            '.with-background-video',
-            '.field-background-video__overlay'
+            '.zivtechBackgroundVideos-processed',
+            '.site-header__logo'
           ],
         screenWidth: selectedCaps == 'chrome' ? [960] : undefined,
       }, resultsCallback)
